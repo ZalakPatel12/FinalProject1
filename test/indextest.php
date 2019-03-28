@@ -11,12 +11,12 @@ declare(strict_types=1);
 use PHPUnit\Framework\TestCase;
 final class indexest extends TestCase
 {
-    public function CVS_File() {
-        $this->assertCVS_File('data/03.csv');
+    public function CSV_File() {
+        $this->assertCSV_File('data/03.csv');
     }
 
-    public function testCVS_File(){
-        echo file_exists('CVS_File');
+    public function testCSV_File(){
+        echo file_exists('CSV_File');
     }
     public function testHTML_Table(){
         echo file_exists('HTML_Table');

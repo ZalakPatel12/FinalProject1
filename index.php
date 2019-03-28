@@ -17,20 +17,20 @@ class initialization
 
 	function initial($filename)
 	{
-		$handler	= (new CVS_File)->create_handle($filename);
-		$data		= (new CVS_File)->get_file_data($handler);
+		$handler	= (new CSV_File)->create_handle($filename);
+		$data		= (new CSV_File)->get_file_data($handler);
 		              (new HTML_Table)->generate_headings($data);
-		while ($data = (new CVS_File)->get_file_data($handler)) {
-            (new CVS_File)->data_into_HTML($data);
+		while ($data = (new CSV_File)->get_file_data($handler)) {
+            (new CSV_File)->data_into_HTML($data);
 		}
 	}
 }
 
 
 /**
- * Get Records From CVS
+ * Get Records From CSV
  */
-class CVS_File
+class CSV_File
 {
 	function create_handle($filename)
 	{
@@ -83,7 +83,7 @@ class HTML_Table
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>CVS Table</title>
+	<title> CSV Table</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<style>
 		/*tbody tr:nth-child(even) {background-color: #f2f2f2 !important;}*/
